@@ -1,5 +1,7 @@
 package jiraiyah.temp_mod.references;
 
+import static jiraiyah.temp_mod.Reference.log;
+
 public class ModItemGroups
 {
     public ModItemGroups()
@@ -9,6 +11,6 @@ public class ModItemGroups
 
     public static void register()
     {
-        Reference.LOGGER.info(">>> Registering Item Groups");
+        log("Registering Item Groups");
     }
 }

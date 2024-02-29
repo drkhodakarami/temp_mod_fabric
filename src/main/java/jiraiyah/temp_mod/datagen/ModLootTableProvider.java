@@ -14,6 +14,8 @@ import net.minecraft.loot.function.ApplyBonusLootFunction;
 import net.minecraft.loot.function.SetCountLootFunction;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 
+import static jiraiyah.temp_mod.Reference.logRGB256;
+
 public class ModLootTableProvider extends FabricBlockLootTableProvider
 {
     public ModLootTableProvider(FabricDataOutput dataOutput)
@@ -24,21 +26,21 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider
     @Override
     public void generate()
     {
-        LOGGER.info(">>> Generating Loot Table Data");
+        logRGB256("Generating Loot Table Data", 0, 255, 0);
     }
 
     private LootTable.Builder customOreDrops(Block drop, Item item, float min, float max)
     {
         return BlockLootTableGenerator.dropsWithSilkTouch(drop,
-                (LootPoolEntry.Builder)
-                        this.applyExplosionDecay(drop,
-                                ((LeafEntry.Builder)
-                                        ItemEntry.builder(item)
-                                                .apply(SetCountLootFunction
-                                                        .builder(UniformLootNumberProvider
-                                                                .create(min, max))))
-                                        .apply(ApplyBonusLootFunction
-                                                .oreDrops(Enchantments.FORTUNE))));
+                                                          (LootPoolEntry.Builder)
+                                                                  this.applyExplosionDecay(drop,
+                                                                                           ((LeafEntry.Builder)
+                                                                                                   ItemEntry.builder(item)
+                                                                                                            .apply(SetCountLootFunction
+                                                                                                                           .builder(UniformLootNumberProvider
+                                                                                                                                            .create(min, max))))
+                                                                                                   .apply(ApplyBonusLootFunction
+                                                                                                                  .oreDrops(Enchantments.FORTUNE))));
     }
 
     private LootTable.Builder customOreDrops(Block drop, Item item)

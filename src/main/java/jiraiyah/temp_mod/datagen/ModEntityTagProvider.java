@@ -6,7 +6,7 @@ import net.minecraft.registry.RegistryWrapper;
 
 import java.util.concurrent.CompletableFuture;
 
-import static jiraiyah.temp_mod.references.Reference.LOGGER;
+import static jiraiyah.temp_mod.Reference.logRGB256;
 
 public class ModEntityTagProvider extends FabricTagProvider.EntityTypeTagProvider
 {
@@ -18,6 +18,6 @@ public class ModEntityTagProvider extends FabricTagProvider.EntityTypeTagProvide
     @Override
     protected void configure(RegistryWrapper.WrapperLookup arg)
     {
-        LOGGER.info(">>> Generating Entity Tag Data");
+        logRGB256("Generating Entity Tag Data", 0, 255, 0);
     }
 }

@@ -4,6 +4,8 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeExporter;
 
+import static jiraiyah.temp_mod.Reference.logRGB256;
+
 public class ModRecipeProvider extends FabricRecipeProvider
 {
     public ModRecipeProvider(FabricDataOutput output)
@@ -14,6 +16,6 @@ public class ModRecipeProvider extends FabricRecipeProvider
     @Override
     public void generate(RecipeExporter exporter)
     {
-        LOGGER.info(">>> Generating Recipe Data");
+        logRGB256("Generating Recipe Data", 0, 255, 0);
     }
 }

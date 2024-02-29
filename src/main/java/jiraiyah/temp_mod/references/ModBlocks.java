@@ -7,8 +7,8 @@ import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 
-import static jiraiyah.temp_mod.references.Reference.LOGGER;
-import static jiraiyah.temp_mod.references.Reference.identifier;
+import static jiraiyah.temp_mod.Reference.identifier;
+import static jiraiyah.temp_mod.Reference.log;
 
 public class ModBlocks
 {
@@ -19,7 +19,7 @@ public class ModBlocks
 
     public static void register()
     {
-        LOGGER.info(">>> Registering Blocks");
+        log("Registering Blocks");
     }
 
     private static Block registerBlock(String name, Block block)
@@ -31,6 +31,6 @@ public class ModBlocks
     private static Item registerBlockItem(String name, Block block)
     {
         return Registry.register(Registries.ITEM, identifier(name),
-                new BlockItem(block, new FabricItemSettings()));
+                                 new BlockItem(block, new FabricItemSettings()));
     }
 }

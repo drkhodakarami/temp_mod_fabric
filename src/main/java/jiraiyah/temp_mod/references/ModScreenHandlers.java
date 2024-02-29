@@ -1,7 +1,7 @@
 package jiraiyah.temp_mod.references;
 
 
-import static jiraiyah.temp_mod.references.Reference.LOGGER;
+import static jiraiyah.temp_mod.Reference.log;
 
 public class ModScreenHandlers
 {
@@ -12,6 +12,6 @@ public class ModScreenHandlers
 
     public static void register()
     {
-        LOGGER.info(">>> Registering Screen Handlers");
+        log("Registering Screen Handlers");
     }
 }

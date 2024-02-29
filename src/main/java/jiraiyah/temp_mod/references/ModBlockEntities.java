@@ -1,6 +1,6 @@
 package jiraiyah.temp_mod.references;
 
-import static jiraiyah.temp_mod.references.Reference.LOGGER;
+import static jiraiyah.temp_mod.Reference.log;
 
 public class ModBlockEntities
 {
@@ -11,6 +11,6 @@ public class ModBlockEntities
 
     public static void register()
     {
-        LOGGER.info(">>> Registering Block Entities");
+        log("Registering Block Entities");
     }
 }

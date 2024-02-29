@@ -10,7 +10,7 @@ import net.minecraft.util.Identifier;
 
 import java.util.concurrent.CompletableFuture;
 
-import static jiraiyah.temp_mod.references.Reference.LOGGER;
+import static jiraiyah.temp_mod.Reference.logRGB256;
 
 public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider
 {
@@ -22,7 +22,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider
     @Override
     protected void configure(RegistryWrapper.WrapperLookup arg)
     {
-        LOGGER.info(">>> Generating Block Tag Data");
+        logRGB256("Generating Block Tag Data", 0, 255, 0);
 
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE);
         getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL);

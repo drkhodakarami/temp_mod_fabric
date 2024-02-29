@@ -10,8 +10,8 @@ import net.minecraft.world.gen.placementmodifier.PlacementModifier;
 
 import java.util.List;
 
-import static jiraiyah.temp_mod.references.Reference.LOGGER;
-import static jiraiyah.temp_mod.references.Reference.identifier;
+import static jiraiyah.temp_mod.Reference.identifier;
+import static jiraiyah.temp_mod.Reference.logRGB256;
 
 public class ModPlacedFeatures
 {
@@ -22,7 +22,7 @@ public class ModPlacedFeatures
 
     public static void bootstrap(Registerable<PlacedFeature> context)
     {
-        LOGGER.info(">>> Generating Placed Features Data");
+        logRGB256("Generating Placed Features Data", 0, 255, 0);
     }
 
     public static RegistryKey<PlacedFeature> getRegisterKey(String name)
@@ -41,7 +41,7 @@ public class ModPlacedFeatures
     private static void register(Registerable<PlacedFeature> context,
                                  RegistryKey<PlacedFeature> key,
                                  RegistryEntry<ConfiguredFeature<?, ?>> configuration,
-                                 PlacementModifier ... modifiers)
+                                 PlacementModifier... modifiers)
     {
         register(context, key, configuration, List.of(modifiers));
     }

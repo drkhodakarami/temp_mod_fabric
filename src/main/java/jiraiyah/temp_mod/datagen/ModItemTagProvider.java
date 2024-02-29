@@ -7,7 +7,7 @@ import net.minecraft.registry.tag.ItemTags;
 
 import java.util.concurrent.CompletableFuture;
 
-import static jiraiyah.temp_mod.references.Reference.LOGGER;
+import static jiraiyah.temp_mod.Reference.logRGB256;
 
 public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider
 {
@@ -20,7 +20,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider
     @Override
     protected void configure(RegistryWrapper.WrapperLookup arg)
     {
-        LOGGER.info(">>> Generating Item Tag Data");
+        logRGB256("Generating Item Tag Data", 0, 255, 0);
 
         getOrCreateTagBuilder(ItemTags.AXES);
         getOrCreateTagBuilder(ItemTags.HOES);

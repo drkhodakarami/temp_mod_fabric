@@ -1,40 +1,46 @@
 {
-	"schemaVersion": 1,
-	"id": "zxc_tutorial",
-	"version": "${version}",
-	"name": "ZXC Tutorial",
-	"description": "This is a tutorial mod for first steps. The videos are published on Youtube.",
-	"authors": [
-		"Jiraiyah"
-	],
-	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
-	},
-	"license": "MIT",
-	"icon": "assets/temp_mod/icon.png",
-	"environment": "*",
-	"entrypoints": {
-		"main": [
-			"jiraiyah.temp_mod.Main"
-		],
-		"fabric-datagen": [
-			"jiraiyah.temp_mod.DataGen"
-		],
-		"client": [
-			"jiraiyah.temp_mod.Client"
-		]
-	},
-	"mixins": [
-		"temp_mod.mixins.json"
-	],
-	"depends": {
-		"fabricloader": ">=0.15.3",
-		"minecraft": "~1.20.4",
-		"java": ">=17",
-		"fabric-api": "*"
-	},
-	"suggests": {
-		"another-mod": "*"
-	}
+  "schemaVersion": 1,
+  "id": "zxc_tutorial",
+  "version": "${version}",
+  "name": "ZXC Tutorial",
+  "description": "This is a tutorial mod for first steps. The videos are published on Youtube.",
+  "authors": [
+    "Jiraiyah"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+  "license": "MIT",
+  "icon": "assets/temp_mod/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "jiraiyah.temp_mod.Main"
+    ],
+    "fabric-datagen": [
+      "jiraiyah.temp_mod.DataGen"
+    ],
+    "client": [
+      "jiraiyah.temp_mod.Client"
+    ],
+    "jade": [
+      "jiraiyah.temp_mod.compat.jade.ModJadePlugin"
+    ],
+    "rei_client": [
+      "jiraiyah.temp_mod.compat.rei.ModREIClientPlugin"
+    ]
+  },
+  "mixins": [
+    "temp_mod.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.15.3",
+    "minecraft": "~1.20.4",
+    "java": ">=17",
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
 }

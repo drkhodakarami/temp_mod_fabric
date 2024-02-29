@@ -5,6 +5,8 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 
+import static jiraiyah.temp_mod.Reference.logRGB256;
+
 public class ModModelProvider extends FabricModelProvider
 {
     public ModModelProvider(FabricDataOutput output)
@@ -15,12 +17,12 @@ public class ModModelProvider extends FabricModelProvider
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator)
     {
-        LOGGER.info(">>> Generating Block Model Data");
+        logRGB256("Generating Block Model Data", 0, 255, 0);
     }
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator)
     {
-        LOGGER.info(">>> Generating Item Model Data");
+        logRGB256("Generating Item Model Data", 0, 255, 0);
     }
 }

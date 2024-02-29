@@ -6,7 +6,7 @@ import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.FeatureConfig;
 
-import static jiraiyah.temp_mod.references.Reference.LOGGER;
+import static jiraiyah.temp_mod.Reference.logRGB256;
 
 public class ModConfiguredFeatures
 {
@@ -17,7 +17,7 @@ public class ModConfiguredFeatures
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context)
     {
-        LOGGER.info(">>> Generating Configured Features Data");
+        logRGB256("Generating Configured Features Data", 0, 255, 0);
     }
 
     private static <FC extends FeatureConfig, F extends Feature<FC>> void register(Registerable<ConfiguredFeature<?, ?>> context,

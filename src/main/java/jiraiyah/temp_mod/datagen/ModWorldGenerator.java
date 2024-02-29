@@ -7,7 +7,7 @@ import net.minecraft.registry.RegistryWrapper;
 
 import java.util.concurrent.CompletableFuture;
 
-import static jiraiyah.temp_mod.references.Reference.*;
+import static jiraiyah.temp_mod.Reference.*;
 
 public class ModWorldGenerator extends FabricDynamicRegistryProvider
 {
@@ -17,15 +17,15 @@ public class ModWorldGenerator extends FabricDynamicRegistryProvider
     }
 
     @Override
+    public String getName()
+    {
+        return ModID;
+    }
+
+    @Override
     protected void configure(RegistryWrapper.WrapperLookup registries, Entries entries)
     {
         entries.addAll(registries.getWrapperOrThrow(RegistryKeys.CONFIGURED_FEATURE));
         entries.addAll(registries.getWrapperOrThrow(RegistryKeys.PLACED_FEATURE));
-    }
-
-    @Override
-    public String getName()
-    {
-        return ModID;
     }
 }

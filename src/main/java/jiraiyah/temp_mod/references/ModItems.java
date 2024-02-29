@@ -4,8 +4,8 @@ import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 
-import static jiraiyah.temp_mod.references.Reference.LOGGER;
-import static jiraiyah.temp_mod.references.Reference.identifier;
+import static jiraiyah.temp_mod.Reference.identifier;
+import static jiraiyah.temp_mod.Reference.log;
 
 public class ModItems
 {
@@ -16,7 +16,7 @@ public class ModItems
 
     public static void register()
     {
-        LOGGER.info(">>> Registering Items");
+        log("Registering Items");
     }
 
     private static Item registerItem(String name, Item item)

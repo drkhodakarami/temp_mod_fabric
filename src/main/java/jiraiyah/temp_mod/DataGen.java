@@ -8,14 +8,15 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.registry.RegistryBuilder;
 import net.minecraft.registry.RegistryKeys;
 
-import static jiraiyah.temp_mod.references.Reference.LOGGER;
+import static jiraiyah.temp_mod.Reference.logBackRGB256;
+import static jiraiyah.temp_mod.Reference.logRGB256;
 
 public class DataGen implements DataGeneratorEntrypoint
 {
     @Override
     public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator)
     {
-        LOGGER.info(">>> Generating Data");
+        logBackRGB256("Generating Data", 255, 255, 0, 0, 155, 55);
 
         FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
 
@@ -31,7 +32,7 @@ public class DataGen implements DataGeneratorEntrypoint
     @Override
     public void buildRegistry(RegistryBuilder registryBuilder)
     {
-        LOGGER.info(">>> Registering Data Generation Features");
+        logRGB256("Registering Data Generation Features", 0, 255, 0);
 
         registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap);
         registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, ModPlacedFeatures::bootstrap);
